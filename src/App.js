@@ -23,16 +23,18 @@ class App extends React.Component {
   }*/
 
   render() {
+   
     return (
-      <HashRouter>
+
       <div>
+      <HashRouter>
   <Header/>
   <Route exact path = "/" component={Reservation}/>  
   <Route path = "/statistics" component={Statistics}/> 
-  <Route path = "/confirm" component={Confirmation}/> 
+  <Route path = "/confirm/:hour/:id" component={Confirmation}/> 
 
-</div>
 </HashRouter>
+</div>
     );
   }
 }

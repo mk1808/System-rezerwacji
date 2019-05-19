@@ -68,3 +68,8 @@ a:hover {
 .noBtn:hover{
     background-color: #d03232
 }
+
+.wholeTable{
+    overflow-x: auto;
+    width:100%;
+}

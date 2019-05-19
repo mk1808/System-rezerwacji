@@ -11,22 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.navbar-nav{
+  margin-left:auto
+}
 
+/*
 .navbar-brand{
   width:80%;
 }
 
-.navbar-nav{
-  float: right;
-    display: -webkit-box;
-   
-    width: 16%;
-}
+
 
 .nav-item{
   margin-right:10px;
   margin-left:10px;
-}
+}*/
 
 .container{
 
@@ -52,6 +51,10 @@ table td,th{
   background-color: cornflowerblue;
 }
 
+
+.react-confirm-alert-body{
+  text-align: center
+}
 .btn :hover{
   color:black;
   background-color: #888888!important;
