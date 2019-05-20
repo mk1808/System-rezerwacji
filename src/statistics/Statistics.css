@@ -5,7 +5,7 @@
 .chart{
     margin-left:auto;
     margin-right:auto;
-    /*overflow-x: scroll;*/
+    
 }
 
 .container2{
@@ -14,4 +14,45 @@
 
 .cortsStat{
     margin-bottom: 60px;
+}
+
+@media screen and (max-width: 1000px) {
+    .recharts-wrapper.chart{
+        width:650px!important;
+    }
+    svg.recharts-surface{
+        width:600px;
+        margin-left:0;
+    }
+
+    span.recharts-legend-wrapper{
+        width:500px!important;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .recharts-wrapper.chart{
+        width:450px!important;
+    }
+    svg.recharts-surface{
+        width:400px;
+    }
+
+    .recharts-legend-wrapper{
+        width:200px!important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .recharts-wrapper.chart{
+        width:350px!important;
+    }
+    
+    svg.recharts-surface{
+        width:300px;
+    }
+
+    .recharts-legend-wrapper{
+        width:200px!important;
+    }
 }

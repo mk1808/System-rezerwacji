@@ -2,8 +2,8 @@ import React from 'react';
 import './Confirmation.css'
 import {NavLink}from 'react-router-dom'
 import { ToastsContainer, ToastsStore } from 'react-toasts';
-import { confirmAlert } from 'react-confirm-alert'; // Import
-import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
+import { confirmAlert } from 'react-confirm-alert'; 
+import 'react-confirm-alert/src/react-confirm-alert.css'; 
 
 
 
@@ -20,8 +20,6 @@ disabled=true;
 componentWillMount(){
     this.hour=this.props.match.params.hour;
     this.number=this.props.match.params.id;
-    console.log(this.hour);
-    console.log(this.number);
 }
 
 
@@ -30,11 +28,11 @@ onInputChange=(e)=>{
     this.name=e.target.value;
     if (this.name==null||this.name==""){
         this.disabled=true;
-        console.log(this.disabled)
+        
     }
     else {
         this.disabled=false;
-        console.log(this.disabled)
+        
     }
     this.forceUpdate(); 
     
@@ -55,7 +53,6 @@ submit = () => {
 onConfirm=(e)=>{
     
     if(!this.disabled){
-    console.log(this.name);
     fetch('/api/reservations',{
         method:"POST",
         headers:{

@@ -1,11 +1,4 @@
-/*class Reservation{
-  constructor(){
-    this.cort;
-    this.hour;
-    this.name;
-  }
-}
-*/
+
 module.exports = {
   initRoutes: (app) => {
     app.get('/api/hello', (req, res) => {

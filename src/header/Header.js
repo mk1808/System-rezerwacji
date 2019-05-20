@@ -6,26 +6,11 @@ url;
     constructor() {
         super();
         this.url=window.location.pathname;
-        console.log(this.url);
     }
 
     render(){
         return(
-/*
-<nav className="navbar navbar-light bg-light justify-content-between">
-        <a className="navbar-brand">Navbar</a>
 
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item">
-              <NavLink className="nav-link" exact to="/">Rezerwacje</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/statistics">Statystyki </NavLink>
-            </li>
-            
-          </ul>
-        
-      </nav>*/
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
   <a className="navbar-brand" href="#">
     <img src="https://media.istockphoto.com/vectors/tennis-rackets-vector-id165790819?k=6&m=165790819&s=612x612&w=0&h=ImWjpYXRv3LtiG_RxGDvOK9vMKUlxCEDWtx85r87qCo="

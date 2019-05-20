@@ -18,17 +18,16 @@ class Reservation extends React.Component {
       .then((data) => {
         this.reservations = data;
        this.reservations.map(x=>{
-          console.log(x.cort.split('t'));
+        
           this.tableRes[x.hour-this.begin][(x.cort.split('t')[1]*1)]="zajęte"
-          console.log(this.tableRes);
+          
         })
           this.forceUpdate();
-        console.log(this.reservations);
+        
       });
   }
 componentWillMount() {
   
-  console.log(this.reservations);
      
   }
   constructor() {
@@ -38,17 +37,17 @@ componentWillMount() {
       "lipca", "sierpnia", "września", "października", "listopada", "grudnia"]
 
     var dd = String(this.today.getDate()).padStart(2, '0');
-    var mm = String(this.today.getMonth()); //January is 0!
+    var mm = String(this.today.getMonth()); 
     var yyyy = this.today.getFullYear();
 
     this.today = dd + ' ' + months[mm] + ' ' + yyyy;
-    console.log(this.today);
+  
 
     for (let i = 0; i < 16; i++) {
       this.hours.push(i);
-      //  this.hours.push(this.begin+i+1);
+
     }
-    console.log(this.hours);
+  
 
     this.tableRes=[];
     for (let i = 6; i < 22; i++) {
@@ -64,7 +63,7 @@ checkReservation=(status,hour,id)=>{if(status!=null) return (status)
 else return  (<NavLink to={"/confirm/"+(hour+6)+"/"+(id+1)} className="myButton">Zarezerwuj</NavLink>)}
 
 renderRow=(x)=>{
-  //{this.checkReservation(y)}
+ 
 
   return this.tableRes[x].map((y, index) => {
     return (<td >{this.checkReservation(y, x,index )}</td>)

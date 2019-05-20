@@ -13,14 +13,6 @@ class App extends React.Component {
     super(props);
     this.state = {};
   }
-/*
-  componentDidMount() {
-    fetch('/api/hello')
-      .then(response => response.json())
-      .then((data) => {
-        this.setState({ message: data.message });
-      }); 
-  }*/
 
   render() {
    

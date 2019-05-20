@@ -24,9 +24,8 @@ class Statistics extends React.Component {
             .then((data) => {
                 this.reservations = data;
                 this.reservations.map(x => {
-                    console.log(x.cort.split('t'));
                     this.tableRes[x.hour - this.begin][(x.cort.split('t')[1] * 1)] = "zajęte"
-                    console.log(this.tableRes);
+                    
                 })
                 this.forceUpdate();
                 this.taken = Math.round((this.reservations.length / this.all) * 100);
@@ -46,7 +45,6 @@ class Statistics extends React.Component {
                     let user={name:el.name,Zajęte:el.number};
                     this.Udata.push({name:el.name,Zajęte:el.number});
                 })
-                console.log(this.Udata)
                 this.forceUpdate();
             })
 
